@@ -1,0 +1,27 @@
+Flight Management application
+Scenarios Version 0
+->Start code using TDD(First test then code)
+
+Add passenger
+N.B Add passenger only once.
+ a)	Add Passenger
+ 	Approve the request for economy flight.
+   If not economy flight, approve the request if only passenger is VIP otherwise reject the request
+
+b)	Remove Passenger- Remove passengers from the flight.
+	Reject the request for VIP-passenger and approve the request for non-VIP.
+	Remove passenger for Premium.
+
+Conclusion-
+   Conclusion-
+       a) Nouns Flight (Flight Type, Set<Passengers> passengers) and Passenger (VIP or not?)
+       b) Flight has methods boolean addPassenger(Passenger p), boolean removePassenger(), getPassengers:List<Passenger>
+
+
+Scenarios Version 1
+Improve it (replace conditional with polymorphism) and improve the test
+	It's better to use polymorphism instead of using conditional. Which means remove Flight Type attribute and have different child classes, EconomyFlight, BusinessFlight, PremiumFlight
+	by making flight abstract we can abstract methods
+	boolean addPassenger(Passenger passenger);
+	boolean removePassenger(Passenger passenger);
+
