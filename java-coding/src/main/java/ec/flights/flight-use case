@@ -1,5 +1,5 @@
 Flight Management application
-Scenarios Version 0
+Scenarios Version 1
 ->Start code using TDD(First test then code)
 
 Add passenger
@@ -18,10 +18,11 @@ Conclusion-
        b) Flight has methods boolean addPassenger(Passenger p), boolean removePassenger(), getPassengers:List<Passenger>
 
 
-Scenarios Version 1
+Scenarios Version 2
 Improve it (replace conditional with polymorphism) and improve the test
 	It's better to use polymorphism instead of using conditional. Which means remove Flight Type attribute and have different child classes, EconomyFlight, BusinessFlight, PremiumFlight
 	by making flight abstract we can abstract methods
 	boolean addPassenger(Passenger passenger);
 	boolean removePassenger(Passenger passenger);
 
+Scenarios Version 3
