@@ -1,4 +1,4 @@
-package ec.flights.v0;
+package ec.flights.v1;
 
 import java.util.Collections;
 import java.util.HashSet;

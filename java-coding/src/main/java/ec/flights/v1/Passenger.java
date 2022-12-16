@@ -1,4 +1,4 @@
-package ec.flights.v0;
+package ec.flights.v1;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
