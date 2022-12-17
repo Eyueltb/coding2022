@@ -1,13 +1,24 @@
 package leetcode.tries;
 
-import lombok.Data;
-
 import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
+    //Map sum using brute force
+    HashMap<String, Integer> map = new HashMap<>();
+    public void insert(String key, int val) {
+        map.put(key, val);
+    }
+    public int sum(String prefix) {
+        int result = 0;
+        for (String key: map.keySet()) {
+            if (key.startsWith(prefix)) {
+                result += map.get(key);
+            }
+        }
+        return result;
+    }
     public static void main(String[] args) {
-
+        Main m = new Main();
         Trie trie = new Trie();
         trie.insert("apple");
         System.out.println(trie.search("apple"));   // return True
@@ -27,6 +38,19 @@ public class Main {
         System.out.println(trieArray.search("app"));     // return True
         System.out.println(trieArray.longestPrefix("app"));
         System.out.println(trieArray.longestPrefix("appleb"));
+
+        MapSum mapSum = new MapSum();
+        mapSum.insert("apple", 3);
+        System.out.println(mapSum.sum("ap"));           // return 3 (apple = 3)
+        mapSum.insert("app", 2);
+        System.out.println(mapSum.sum("ap"));           // return 5 (apple + app = 3 + 2 = 5)
+        m.insert("apple", 3);
+        System.out.println(m.sum("ap"));           // return 3 (apple = 3)
+        m.insert("app", 2);
+        System.out.println(m.sum("ap"));           // return 5 (apple + app = 3 + 2 = 5)
+
+
     }
+
 }
 
