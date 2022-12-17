@@ -72,10 +72,10 @@ public class Trie {
             if(curr.children.get(c) == null) {
                 return s;
             }
-            s+=c;
             curr = curr.children.get(c);
+            s += c;
         }
-        return word;
+        return s;
     }
     @Data
     private class TrieNode {
