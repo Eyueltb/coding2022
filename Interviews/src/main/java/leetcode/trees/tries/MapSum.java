@@ -1,4 +1,4 @@
-package leetcode.tries;
+package leetcode.trees.tries;
 
 import lombok.Data;
 
@@ -58,9 +58,9 @@ public class MapSum {
         TrieNode curr = root;
         curr.score += delta;
         for(char c : key.toCharArray()) {
-          curr.children.putIfAbsent(c, new TrieNode());
-          curr = curr.children.get(c);
-          curr.score += delta;
+            curr.children.putIfAbsent(c, new TrieNode());
+            curr = curr.children.get(c);
+            curr.score += delta;
         }
     }
 
@@ -79,5 +79,3 @@ public class MapSum {
         private int score;
     }
 }
-
-

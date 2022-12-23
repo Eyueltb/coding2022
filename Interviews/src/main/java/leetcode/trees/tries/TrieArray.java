@@ -1,4 +1,4 @@
-package leetcode.tries;
+package leetcode.trees.tries;
 
 import lombok.Data;
 

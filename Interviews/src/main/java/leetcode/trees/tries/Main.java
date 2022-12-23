@@ -1,4 +1,5 @@
-package leetcode.tries;
+package leetcode.trees.tries;
+
 
 import java.util.HashMap;
 
@@ -53,4 +54,3 @@ public class Main {
     }
 
 }
-

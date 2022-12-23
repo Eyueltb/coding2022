@@ -1,4 +1,4 @@
-package leetcode.tries;
+package leetcode.trees.tries;
 
 import lombok.Data;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 public class Trie {
     private TrieNode root;
     /** Initialize your data structure here. */
-   public Trie() {
+    public Trie() {
         root = new TrieNode();
     }
     /** Inserts a word into the trie. */
@@ -77,6 +77,7 @@ public class Trie {
         }
         return s;
     }
+
     @Data
     private class TrieNode {
         public boolean isWord;
